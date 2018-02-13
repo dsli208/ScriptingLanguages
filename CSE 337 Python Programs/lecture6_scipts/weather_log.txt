@@ -1,0 +1,9 @@
+Tonight Rain/SnowLikely thenPartly Cloudy Low: 26 °F Tonight: Rain likely, mixing with snow after 9pm, then gradually ending.  Cloudy during the early evening, then gradual clearing, with a low around 26. Wind chill values between 20 and 25. West wind 14 to 16 mph becoming northwest after midnight.  Chance of precipitation is 70%. Total nighttime snow accumulation of less than a half inch possible. 
+Thursday Sunny High: 32 °F Thursday: Sunny, with a high near 32. Wind chill values between 15 and 25. Northwest wind 10 to 14 mph. 
+ThursdayNight Mostly Clear Low: 21 °F Thursday Night: Mostly clear, with a low around 21. West wind 6 to 10 mph. 
+Friday Mostly Cloudy High: 35 °F Friday: Mostly cloudy, with a high near 35. Wind chill values between 15 and 25. Northwest wind 5 to 9 mph becoming south in the afternoon. 
+FridayNight Cloudy thenSlight ChanceRain/Snow Low: 35 °F Friday Night: A slight chance of rain and snow between 1am and 3am.  Cloudy, with a steady temperature around 35. South wind around 9 mph.  Chance of precipitation is 20%.
+Saturday Mostly Cloudythen ChanceRain High: 46 °F Saturday: A 40 percent chance of rain after noon.  Mostly cloudy, with a high near 46.
+SaturdayNight Rain Low: 38 °F Saturday Night: Rain.  Low around 38. Chance of precipitation is 80%.
+Sunday Rain Likely High: 45 °F Sunday: Rain likely.  Cloudy, with a high near 45. Chance of precipitation is 70%.
+SundayNight Chance Rainthen MostlyCloudy Low: 32 °F Sunday Night: A 30 percent chance of rain before midnight.  Mostly cloudy, with a low around 32.
