@@ -29,3 +29,14 @@ with open('prices_sample.csv', 'rt') as csvfile:
     min = min(priceList)
     max = max(priceList)
     # calculate standard deviation
+    sigmatotal = 0
+    for n in priceList:
+        sigmatotal += (n - mean)**2
+    sigmatotal /= len(priceList)
+    sigmatotal = sigmatotal**(0.5)
+    # The line of sigmatotal above, when finished is the standard deviation
+
+    print("Mean: ", mean)
+    print("Min: ", min)
+    print("Max: ", max)
+    print("Standard Deviation: ", sigmatotal)
