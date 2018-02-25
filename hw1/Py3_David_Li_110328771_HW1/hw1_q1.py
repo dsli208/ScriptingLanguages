@@ -3,7 +3,7 @@ import datetime
 
 # Create the output file
 output_txt = open('prices.txt', 'w')
-output_txt.write('Time' + " " + 'Price')
+output_txt.write('Time' + " " + 'Price\n')
 priceList = []
 
 # Open the input file
