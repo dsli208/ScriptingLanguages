@@ -8,8 +8,10 @@ def passwordCheck(s):
     distinctCharTestValue = False
 
     # Numeric, alphabet, and special test
-    # Also tests for no previous character
-    previousChar = 0
+    # Also tests for no previous character, more than two consecutive times
+    previousChar = '\0'
+    previousCharOccurrences = 0
+    distinctChars = []
     for c in s:
         if c >= 48 and c <= 57:
             numTestValue = True
@@ -19,10 +21,25 @@ def passwordCheck(s):
             specialTestValue = True
 
         # Test for previous character equivalence to current one
-        if previousChar != 0:
+        if previousChar != '\0':
             if c == previousChar:
-                return False
+                previousCharOccurrences += 1
+                if previousCharOccurrences > 2:
+                    return False
+            if distinctChars.index(c) < 0:
+                distinctChars += 1
             previousChar = c
+
+    # Increasing value pattern test
+
+
+    # Distinct character test
+    if distinctChars >= len(s) / 2:
+        distinctCharTestValue = True
+
+    return lengthTestValue and numTestValue and alphaTestValue and specialTestValue and noIncValTestValue and distinctCharTestValue
+
+
 
 
 

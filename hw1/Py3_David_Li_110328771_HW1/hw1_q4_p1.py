@@ -6,6 +6,13 @@ def getWordDictionary(filepath):
     for line in f:
         for word in line.split():
             if word in words:
-                words[word] += 1
-            else:
-                words[word] = 1
+                words[word] = words.get(word, 0) + 1
+            #else:
+                #words[word] = 1
+
+    f.close()
+
+    print(words)
+    return words
+
+getWordDictionary('gutenburg.txt')
