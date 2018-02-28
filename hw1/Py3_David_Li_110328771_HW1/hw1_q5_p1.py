@@ -4,11 +4,12 @@ def passwordCheck(s):
     numTestValue = False
     alphaTestValue = False
     specialTestValue = False
-    noIncValTestValue = False
+    noIncValTestValue = True
     distinctCharTestValue = False
 
     # Numeric, alphabet, and special test
     # Also tests for no previous character, more than two consecutive times
+    increasingChars = 1
     previousChar = '\0'
     previousCharOccurrences = 0
     distinctChars = []
@@ -28,10 +29,18 @@ def passwordCheck(s):
                     return False
             if distinctChars.index(c) < 0:
                 distinctChars += 1
+
+            # Check for consecutive ASCII/ord value
+            if ord(c) - ord(previousChar) == 1:
+                increasingChars += 1
+            else:
+                increasingChars = 1
+
             previousChar = c
 
-    # Increasing value pattern test
-
+        # Increasing value pattern test
+        if increasingChars > 3:
+            noIncValTestValue = False
 
     # Distinct character test
     if distinctChars >= len(s) / 2:
