@@ -1,53 +1,23 @@
 import copy
 
-def interleave(list1, list2):
-    for i in range(0, len(list1)):
-        slice1 = list1[:i]
-        slice2 = list1[i:]
-        for j in range(0, len(list2)):
-            slice3 = list2[:j]
-            slice4 = list2[j:]
-            #print(slice1)
-            #print(slice2)
-            #print(slice3)
-            #print(slice4)
 
-            # slice 1, 3, 4, 2
+def interLeave(list1, list2):
+    interleave([], list1, list2)
 
-            newList1 = list(copy.deepcopy(slice1))
-            newList2 = list(copy.deepcopy(slice2))
-            newList3 = list(copy.deepcopy(slice3))
-            newList4 = list(copy.deepcopy(slice4))
-            newList1.extend(newList3)
-            newList1.extend(newList4)
-            newList1.extend(newList2)
-            print(newList1)
+def interleave(list0, list1, list2):
+    # base cases
+    if len(list1) == 0 and len(list2) == 0:
+        print(list0)
 
-            newList1 = list(copy.deepcopy(slice1))
-            newList2 = list(copy.deepcopy(slice2))
-            newList3 = list(copy.deepcopy(slice3))
-            newList4 = list(copy.deepcopy(slice4))
-            newList1.extend(newList2)
-            newList1.extend(newList3)
-            newList1.extend(newList4)
-            print(newList1)
+    # recursive calls - use backtracking to finish the problem
+    if len(list1) > 0:
+        list0.append(list1.pop(0))
+        interleave(list0, list1, list2)
+        list1.insert(0, list0.pop())
 
-            newList1 = list(copy.deepcopy(slice1))
-            newList2 = list(copy.deepcopy(slice3))
-            newList3 = list(copy.deepcopy(slice2))
-            newList4 = list(copy.deepcopy(slice4))
-            newList1.extend(newList2)
-            newList1.extend(newList3)
-            newList1.extend(newList4)
-            print(newList1)
+    if len(list2) > 0:
+        list0.append(list2.pop(0))
+        interleave(list0, list1, list2)
+        list2.insert(0, list0.pop())
 
-
-#def insertList(list1, list2, index):
-    #for i in range(0, len(list2)):
-        #print("List2: ", list2)
-        #list1.insert(list2[i], index)
-        #index += 1
-        #print("List1: ", list1)
-        #return list1
-
-print(interleave([1, 2], [3, 4]))
+interLeave([1, 2], [3, 4])
