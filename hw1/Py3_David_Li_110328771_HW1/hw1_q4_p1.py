@@ -12,7 +12,7 @@ def getWordDictionary(filepath):
 
     f.close()
 
-    print(words)
+    #print(words)
     return words
 
-getWordDictionary('gutenburg.txt')
+#getWordDictionary('gutenburg.txt')

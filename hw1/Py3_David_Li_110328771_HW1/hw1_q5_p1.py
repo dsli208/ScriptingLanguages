@@ -14,9 +14,9 @@ def passwordCheck(s):
     previousCharOccurrences = 0
     distinctChars = []
     for c in s:
-        if c >= 48 and c <= 57:
+        if c >= '0' and c <= '9':
             numTestValue = True
-        elif (c >= 65 and c <= 90) or (c >= 97 and c <= 122):
+        elif (c >= 'A' and c <= 'Z') or (c >= 'a' and c <= 'z'):
             alphaTestValue = True
         else:
             specialTestValue = True
@@ -27,8 +27,13 @@ def passwordCheck(s):
                 previousCharOccurrences += 1
                 if previousCharOccurrences > 2:
                     return False
-            if distinctChars.index(c) < 0:
-                distinctChars += 1
+            else:
+                previousCharOccurrences = 1
+                previousChar = c
+
+            if c not in distinctChars:
+                distinctChars.extend(c)
+
 
             # Check for consecutive ASCII/ord value
             if ord(c) - ord(previousChar) == 1:
@@ -36,14 +41,16 @@ def passwordCheck(s):
             else:
                 increasingChars = 1
 
+            # Increasing value pattern test
+            if increasingChars > 3:
+                noIncValTestValue = False
+        else:
             previousChar = c
+            distinctChars.extend(c)
 
-        # Increasing value pattern test
-        if increasingChars > 3:
-            noIncValTestValue = False
 
     # Distinct character test
-    if distinctChars >= len(s) / 2:
+    if len(distinctChars) >= (int)(len(s) / 2):
         distinctCharTestValue = True
 
     return lengthTestValue and numTestValue and alphaTestValue and specialTestValue and noIncValTestValue and distinctCharTestValue
