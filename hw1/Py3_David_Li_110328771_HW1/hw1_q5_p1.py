@@ -55,10 +55,6 @@ def passwordCheck(s):
 
     return lengthTestValue and numTestValue and alphaTestValue and specialTestValue and noIncValTestValue and distinctCharTestValue
 
-
-
-
-
 # Test length
 def lengthTest(s):
     return len(s) >= 8

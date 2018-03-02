@@ -1,7 +1,7 @@
-
 from hw1_q4_p1 import getWordDictionary
 
 dictionary = getWordDictionary('gutenburg.txt')
+
 sortedValues = sorted(dictionary, key = dictionary.get, reverse=True)
 print(sortedValues[:10])
 

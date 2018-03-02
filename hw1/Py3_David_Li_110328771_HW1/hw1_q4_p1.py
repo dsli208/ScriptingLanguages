@@ -12,8 +12,6 @@ def getWordDictionary(filepath):
 
     f.close()
 
-    #print(words)
     return words
 
-filepath = input("Enter file path: ")
-getWordDictionary(filepath)
+print(getWordDictionary('gutenburg.txt'))
