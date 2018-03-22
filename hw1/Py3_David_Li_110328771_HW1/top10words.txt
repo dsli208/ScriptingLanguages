@@ -1,0 +1,10 @@
+the: 25373 occurrences
+I: 20648 occurrences
+and: 19819 occurrences
+to: 16969 occurrences
+of: 16717 occurrences
+a: 13665 occurrences
+my: 11433 occurrences
+in: 10529 occurrences
+you: 9593 occurrences
+is: 8336 occurrences
