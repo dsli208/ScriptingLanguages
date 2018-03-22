@@ -95,4 +95,4 @@ _hidd:*:261:261:HID Service User:/var/db/hidd:/usr/bin/false
 _cmiodalassistants:*:262:262:CoreMedia IO Assistants User:/var/db/cmiodalassistants:/usr/bin/false
 _analyticsd:*:263:263:Analytics Daemon:/var/db/analyticsd:/usr/bin/false
 _fpsd:*:265:265:FPS Daemon:/var/db/fpsd:/usr/bin/false
-_timed:*:266:266:Time Sync Daemon:/var/db/timed:/usr/bin/false
+_timed:*:266:266:Time Sync Daemon:/var/db/timed:/usr/bin/falseDavid S. Li:267:0:DSLIGROUP:/var/dsli:/usr/bin/dsli/
