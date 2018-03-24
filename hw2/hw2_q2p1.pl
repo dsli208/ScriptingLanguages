@@ -12,6 +12,7 @@ open(my $input_file, "<", $input_dir) or die("Cannot open input file.");
 # Assemble a HASH of the lines (key) and their length (value)
 while(my $line = <$input_file>) {
     #print "$line\n";
+    chomp($line);
     my $len = length($line);
     $lines{$line} = $len;
     #print "$lines{$line}\n";

@@ -11,6 +11,7 @@ sub formatMaxLine {
   open(my $output_file, ">", $output_dir) or die("Cannot open output file.");
 
   while (my $line = <$input_file>) {
+    chomp($line);
     if (length($line) > $max_length) {
       my $n = 0;
       while ($n < length($line)) {
