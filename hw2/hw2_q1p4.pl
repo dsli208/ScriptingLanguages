@@ -31,7 +31,7 @@ sub addUser {
       }
   }
 
-  my $group_id = 0; # FIGURE OUT HOW TO ASSIGN A RANDOM ONE
+  my $group_id = $groups{(keys %groups)[int(rand(keys %groups))]}; # FIGURE OUT HOW TO ASSIGN A RANDOM ONE
   $max_user_id += 1;
   my $new_user = "$username:$max_user_id:$group_id:$name:$dir:$shell\n";
 
