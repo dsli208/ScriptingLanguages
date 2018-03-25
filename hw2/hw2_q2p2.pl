@@ -9,7 +9,7 @@ sub formatMaxLine {
 
   open(my $input_file, "<", $input_dir) or die("Cannot open input file.");
   open(my $output_file, ">", $output_dir) or die("Cannot open output file.");
-
+=pod
   while (my $line = <$input_file>) {
     chomp($line);
     if (length($line) > $max_length) {
@@ -28,7 +28,23 @@ sub formatMaxLine {
       }
     }
   }
-
+=cut
+  my $substr = "";
+  my $n = 0;
+  while (my $line = <$input_file>) {
+    chomp($line);
+    my @words = split(" ", $line);
+    foreach my $word(@words) {
+      my $len = length($word);
+      if ($n + $len > $max_length) {
+        print $output_file "$substr\n";
+        $substr = "";
+        $n = 0;
+      }
+      $substr .= "$word ";
+      $n += $len;
+    }
+  }
   close($input_file); close($output_file);
 }
 
