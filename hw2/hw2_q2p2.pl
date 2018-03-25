@@ -42,9 +42,10 @@ sub formatMaxLine {
         $n = 0;
       }
       $substr .= "$word ";
-      $n += $len;
+      $n += $len + 1;
     }
   }
+  print $output_file "$substr\n";
   close($input_file); close($output_file);
 }
 
