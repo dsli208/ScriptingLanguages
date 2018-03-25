@@ -1,0 +1,32 @@
+First regex:
+Match:
+-208.208F
++2048F
+1F
+
+No match:
+8.dF
+0x88.25
+&.F
+
+Second regex:
+Match:
+s/#1
+one/J/ig
+one/a/ig
+
+No match:
+one/ba/ig
+s/#?1
+one/Jan/ig
+
+Third regex:
+Match:
+*9 */
+*7 */
+*3 */
+
+No match:
+*.3 */
+?3 */
+.3 */
