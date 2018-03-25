@@ -1,3 +1,9 @@
+=pod
+ David S. Li
+ 110328771
+ CSE 337 HW#2
+=cut
+
 use strict;
 use warnings;
 
@@ -9,26 +15,7 @@ sub formatMaxLine {
 
   open(my $input_file, "<", $input_dir) or die("Cannot open input file.");
   open(my $output_file, ">", $output_dir) or die("Cannot open output file.");
-=pod
-  while (my $line = <$input_file>) {
-    chomp($line);
-    if (length($line) > $max_length) {
-      my $n = 0;
-      while ($n < length($line)) {
-        my $substr = "";
-        if ($n + $max_length < length($line)) {
-          $substr = substr $line, $n, $n + $max_length;
-          print $output_file "$substr\n";
-        }
-        else {
-          $substr = substr $line, $n, length($line);
-          print $output_file "$substr\n";
-        }
-        $n += $max_length;
-      }
-    }
-  }
-=cut
+
   my $substr = "";
   my $n = 0;
   while (my $line = <$input_file>) {

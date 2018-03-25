@@ -1,5 +1,12 @@
+=pod
+ David S. Li
+ 110328771
+ CSE 337 HW#2
+=cut
+
 use strict;
 use warnings;
+
 sub reverseAndSort {
 my $input_dir = $_[0];
 my $num_lines = 0; my $num_words = 0; my $num_chars = 0;
