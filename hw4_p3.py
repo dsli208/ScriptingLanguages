@@ -7,6 +7,7 @@ root.title("CSE 337 Drawing Program")
 
 # make some of the widgets
 cmd = IntVar()
+color = IntVar()
 canvas = Canvas(master, width=400, height=400)
 p1 = Label(root, text="Command:")
 e1  = Entry(root, width=40)
@@ -28,10 +29,24 @@ def doRadio():
     else: # delete the record with given name
         canvas.create_oval(int(e1.get(), e2.get(), e3.get(), e4.get()))
 
-#finish making widgets
+#def doColor():
+    #c = cmd.get()  # get the command number
+    #if c == 1:  # search with a given name
+        #canvas.create_rectangle(int(e1.get(), e2.get(), e3.get(), e4.get()))
+    #elif c == 2:  # insert a (name, phone number) record
+        #canvas.create_line(int(e1.get(), e2.get(), e3.get(), e4.get()))
+    #else:  # delete the record with given name
+        #canvas.create_oval(int(e1.get(), e2.get(), e3.get(), e4.get()))
+
+# shape radio buttons
 r1=Radiobutton(root,text="Rectangle",variable=cmd,value=1,command=doRadio)
 r2=Radiobutton(root,text="Line",variable=cmd,value=2,command=doRadio)
 r3=Radiobutton(root,text="Oval",variable=cmd,value=3,command=doRadio)
+
+# color radio buttons
+#r4=Radiobutton(root, text="Red", variable=color, value = 4, command=doColor)
+#r5=Radiobutton(root, text="Blue", variable=color, value = 5, command=doColor)
+#r6=Radiobutton(root, text="Green", variable=color, value = 6, command=doColor)
 
 # pack
 canvas.pack()

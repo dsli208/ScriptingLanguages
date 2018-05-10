@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title> Calculator </title>
+    </head>
+    <body>
+        <form>
+          <p>
+              {{ form.num1.label }}<br>
+              {{ form.num1(size=32) }}<br>
+              {% for error in form.username.errors %}
+              <span style="color: red;">[{{ error }}]</span>
+              {% endfor %}
+          </p>
+          <p>
+              {{ form.num2.label }}<br>
+              {{ form.num2(size=32) }}<br>
+              {% for error in form.password.errors %}
+              <span style="color: red;">[{{ error }}]</span>
+              {% endfor %}
+          </p>
+          <p>{{ form.mode }}</p>
+          <p>{{ form.submit() }}</p>
+        </form>
+    </body>
+</html>

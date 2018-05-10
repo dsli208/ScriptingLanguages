@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title> Calculator </title>
+    </head>
+    <body>
+        <form action="{{url_for('result')}}" method="post">
+          <p>
+              {{ form.num1.label }}<br>
+              {{ form.num1(size=32) }}<br>
+              {% for error in form.num1.errors %}
+              <span style="color: red;">[{{ error }}]</span>
+              {% endfor %}
+          </p>
+          <p>
+              {{ form.num2.label }}<br>
+              {{ form.num2(size=32) }}<br>
+              {% for error in form.num2.errors %}
+              <span style="color: red;">[{{ error }}]</span>
+              {% endfor %}
+          </p>
+          {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            <ul class=flashes>
+                {% for message in messages %}
+                <li>{{ message }}</li>
+                {% endfor %}
+              </ul>
+              {% endif %}
+              {% endwith %}
+
+          <p>{{ form.mode }}</p>
+          <p>{{ form.submit() }}</p>
+        </form>
+    </body>
+</html>

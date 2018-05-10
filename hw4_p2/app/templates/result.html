@@ -1,0 +1,10 @@
+<title> Result </title>
+{% block content %}
+    {% if result %}
+      <p> The result of your calculation is {{result}} </p>
+    {% else %}
+      <p> Error </p>
+    {% endif %}
+    <a href="/index">Go back</a>
+
+{% endblock %}
